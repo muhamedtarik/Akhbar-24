@@ -1,0 +1,28 @@
+.pagination{
+    &__lists{
+        display: flex;
+        justify-content: center;
+        list-style: none;
+        width: 100%;
+        padding-right: 0;
+        &__list{
+            margin: 0 7px;
+            &__link{
+               color: #2D639D;
+               font-size: 16px;
+               background-color: #EAEFF4;
+               border-radius: 5px;
+               padding: 2px 9px;
+               text-decoration: none;
+               &:hover{
+                text-decoration: none;
+               }
+            }
+            
+            .active{
+                background-color: #2D639D;
+                color: white;
+            }
+        }
+    }
+}

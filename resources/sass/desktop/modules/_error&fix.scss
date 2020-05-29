@@ -1,0 +1,29 @@
+.errorPage{
+        background: url('/img/desktop/error.png') center center/cover;
+        width: 365px;
+        height: 290px;
+        margin:  0 auto;
+        a{
+            text-decoration: none;
+            background-color: #2D639D;
+            color: white;
+            border-radius: 25px;
+            font-size: 12px;
+            padding: 0.4rem 1.2rem;
+        }
+}
+
+.fixPage{
+        background: url('/img/desktop/fix.png') center center/cover;
+        width: 370px;
+        height: 290px;
+        margin:  0 auto;
+        a{
+            text-decoration: none;
+            background-color: #2D639D;
+            color: white;
+            border-radius: 25px;
+            font-size: 12px;
+            padding: 0.4rem 1.2rem;
+        }
+}

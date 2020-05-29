@@ -1,0 +1,57 @@
+@mixin nav-search($backgroundColor) {
+    width: 0px;
+    transition: 0s all;
+    overflow: hidden;
+    height: 100%;
+
+    .input-group {
+
+        &-append,
+        &-prepend {
+            display: none;
+
+            span {
+                background: transparent;
+                border: 0;
+                border-radius: 0;
+                padding: 0;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                height: 100%;
+                margin: 0 0.5rem;
+
+                i {
+                    color: #fff;
+                }
+            }
+        }
+    }
+
+    .form-control {
+        background: transparent;
+        border: 0;
+        border-radius: 0;
+        outline: none;
+        box-shadow: none;
+        color: #fff;
+        padding: 0;
+    }
+
+    &.show {
+        background: $backgroundColor;
+        width: 200px;
+
+        .input-group {
+
+            &-append,
+            &-prepend {
+                display: block;
+            }
+        }
+
+        .form-control {
+             //padding: 10px;
+        }
+    }
+}

@@ -1,0 +1,63 @@
+.weather1 , .weather2{
+    background-color: white;
+    width: 337px;
+    height: 227px;
+    border-radius: 3px;
+    position: absolute;
+    left: 10px;
+    z-index: 8000000;
+    display: none;
+    .nav{
+        padding-right: 0;
+        .nav-item{
+            width: calc(100% / 6);
+            text-align: center;
+            .nav-link{
+                color: #919191;
+                font-size: 12px;
+                background-color: white;
+                padding: 5px 0px;
+                font-weight: bold;
+                text-align: center;
+            }
+            .active{
+                color: #2D639D;
+                background-color: white;
+                
+            }
+        }
+    }
+}
+
+.weather-img{
+    text-align: center;
+    margin-top: 10px;
+    img{
+        width: 304px;
+        height: 124px;
+        object-fit: cover;
+    }
+}
+
+
+.countries-list{
+    width: 90%;
+    margin: auto;
+    border: 1px solid lightgray;
+    font-size: 14px;
+    font-weight: bold;
+    color: #2D639D;
+    padding: 0 6px;
+    &:focus{
+        box-shadow: 0 0 3pt 2pt white;  
+        border: 1px solid lightgray;
+    }
+}
+
+.countries-arrow{
+    position: absolute;
+    background-color: white;
+    width: 6%;
+    top: 5px;
+    left: 20px;
+}

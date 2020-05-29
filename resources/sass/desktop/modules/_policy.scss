@@ -1,0 +1,45 @@
+.policy{
+    color: black;
+    &__heading{
+        color: #2D639D;
+        font-size: 14px;
+        font-family: $font-bold;
+font-weight: $bold;
+        padding: 0.7rem 0;
+        border-bottom:1.6px solid lightgray;
+        position: relative;
+        &:before{
+          content: "";
+          border-bottom: 2px solid #2D639D;
+          width: 30px;
+          height: 2px;
+          position: absolute;
+          bottom: -1px;
+          right: 0;
+        }
+    }
+   
+    p{
+        font-size: 16px ;
+        line-height: 2rem;
+        display: flex;
+        align-items: flex-start;
+        img{
+            margin: 8px 0 0 0.8rem
+        }
+        
+    }
+    h5{
+        font-weight: bolder;
+    }
+    h6{
+        font-weight: bolder;
+        line-height: 2.5rem;
+        display: flex;
+        align-items: flex-start;
+        img{
+            margin: 0.9rem 0 0 0.8rem;
+        }
+    }
+    
+}

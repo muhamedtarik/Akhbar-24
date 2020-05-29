@@ -1,0 +1,54 @@
+.tags-header{
+    border-bottom: 1.6px solid lightgray;
+    color: #2D639D;
+    position: relative;
+    &:before{
+      content: "";
+      border-bottom: 2px solid #2D639D;
+      width: 30px;
+      height: 2px;
+      position: absolute;
+      bottom: -2px;
+      right: 0;
+    }
+    &__title{
+        color: #2D639D;
+        font-size: 14px;
+        font-family: $font-bold;
+font-weight: $bold;
+    }
+    &__icons{
+        &__twitter{
+            font-size: 12px;
+        color: white;
+        text-decoration: none;
+        border-radius: 3px;
+        padding: 0px 10px;
+        background-color: #03A9F4;
+        &:hover{
+            text-decoration: none;
+            color: white;
+        }
+        img{
+            width: 16px;
+            height: 13px;
+             }
+        }
+        &__fb{
+            font-size: 12px;
+        color: white;
+        text-decoration: none;
+        border-radius: 3px;
+        padding: 2px 10px;
+        background-color: #1878F2;
+        &:hover{
+            text-decoration: none;
+            color: white;
+        }
+        img{
+            width: 15px;
+            height: 15px;
+            }
+        }
+    }
+}

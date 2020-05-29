@@ -1,0 +1,102 @@
+footer{
+   
+}
+.footer__links{
+    background-color: #0B294D;
+    padding:2rem;
+    img{
+        object-fit: cover;
+    }
+    &__heading{
+        color: white;
+        font-weight: bolder;
+        font-size: 14px;  
+        padding:0 1rem;
+    }
+    &__list{
+        padding:0 1rem;
+        list-style-type: none;
+        color: #a3bcd5;
+        font-size:12px;;
+        cursor: pointer;
+        li{
+          margin: 3px 0;
+        }
+        a{
+            color: #a3bcd5;
+            text-decoration: none;
+        }
+    }
+}
+.sport-app-store{
+  width: 150px;
+    height: 46px;
+    display: block;
+    background-image: url(/img/desktop/apps.png);
+    background-repeat: no-repeat;
+    background-position: 0 -93px;
+    border: 1px solid rgba(119, 119, 119, 0.38823529411764707);
+    border-radius: 8px;
+}
+.app-store{
+  width: 150px;
+  height: 46px;
+  display: block;
+  background-image: url(/img/desktop/apps.png);
+  background-repeat: no-repeat;
+  background-position: 0 -92px;
+}
+.google-play{
+  width: 150px;
+  height: 46px;
+  display: block;
+  background-image: url(/img/desktop/apps.png);
+  background-repeat: no-repeat;
+margin-top: 13px;
+  background-position: 0 -184px;
+}
+.sport-google-play{
+  width: 150px;
+  height: 46px;
+  display: block;
+  background-image: url(/img/desktop/apps.png);
+  background-repeat: no-repeat;
+margin-top: 13px;
+  background-position: 0 -184px;
+  border: 1px solid rgba(119, 119, 119, 0.38823529411764707);
+  border-radius: 8px;
+}
+
+
+
+.footer__media{
+    background-color: #09345D;
+
+&__social{
+
+    a{
+        margin: 0 2rem;
+    }
+    
+}
+
+    &__follow{
+        margin: 0.5rem 0.5rem;
+        background-color: #0B294D;
+        padding: 0.7rem;
+        font-family: $font-bold;
+font-weight: $bold;
+        font-size: 12px;
+        color: white;
+        border: 0.5px solid lighten($color: #09345D, $amount: 5);
+        border-radius: 8px;
+    }
+    &__copyrights{
+       p{
+        color: #a3bcd5;
+        font-size: 10px;
+        font-family: $font-bold;
+font-weight: $bold;
+       }
+    }
+}

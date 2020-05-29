@@ -1,0 +1,175 @@
+.teams{
+    background-color: white;
+    img{
+        width: 39px;
+        height: 38px;
+    }
+    table {
+       border-collapse: collapse;
+       font-size: 14px;
+       tr{
+        td:first-child{
+            padding-right: 1.2rem;
+            padding-left: 0rem;
+        }
+    }
+      
+      td {
+        border-bottom: 0.1px solid lightgray;
+        padding: 6px;
+      }
+      tbody{
+          
+          tr:first-child{
+              background-color: darken($color: #f8f9fa, $amount: 1);
+              border-bottom: none;
+          }
+      }
+
+      }
+   
+      &__heading{
+          color: #2D639D;
+          background-color: white;
+          font-size: 14px;
+          padding: 0.8rem 1.2rem;
+          border-bottom: 0.1px solid lightgray;
+          &__country{
+              font-weight: bolder;
+              img{
+                width: 19px;
+                height: 21px;
+              }
+          }
+          &__icon{
+              i{
+                font-size: 20px;
+              }
+          }
+         
+        .rotation{
+             transform: rotate(180deg);
+        }
+          
+         
+      }  
+      &__dropdown{
+        z-index: 2;
+        display: none;
+        position: absolute;
+        width: 100%;
+        padding: 0px 0px;
+        list-style: none;
+        background-color: white;
+        border-bottom-left-radius: 25px;
+        border-bottom-right-radius: 25px;
+        box-shadow: 0 6px 18px grey; 
+        overflow: hidden;
+        &__list{
+            border-bottom: 0.2px solid lightgray;
+            &__link{
+                text-decoration: none;
+                color: black;
+                font-size: 14px;
+                display: inline-block;
+                padding: 13px 18px;
+                width: 100%;
+            }
+            img{
+                width: 19px;
+                height: 21px;
+                margin-left: 0.4rem;
+            }
+        }
+        li:last-child{
+            border-bottom: none;
+        }
+        &.nav-tabs .nav-link.active{
+          background-color:#2D639D;
+          color: white;
+        }
+     }  
+     
+}
+
+.teams-table{
+    &__tabs{
+      &__list{
+        padding: 10px 0;
+        justify-content: space-around;
+        background-color: #F0F4F8;
+        .nav-link{
+          color: #2D639D;
+          background-color: #fff;
+          border-radius: 70px;
+          font-size: 11px;
+          padding: 6px 27px;
+          svg{
+            fill: #2D639D;
+            margin-left: 0.2rem;
+          }
+      
+          &.active{
+            color: #fff;
+            background-color: #2D639D;
+            svg{
+              fill: #fff;
+            }
+          }
+        }
+        
+      }
+    }
+  }
+
+
+.players{
+    background-color: white;
+    img{
+        width: 62px; 
+        height: 62px;
+    }
+    table {
+       border-collapse: collapse;
+       font-size: 14px;
+      thead{
+        tr{
+            border-bottom: 0.1px solid lightgray;
+           }
+           td{
+               padding: 0.3rem 0;
+           }
+      }
+       tbody{
+           tr{
+               border-bottom: 0.1px solid lightgray;
+               padding-top: 6px;
+               td:first-child{
+                   font-size: 30px;
+                   color: #2D639D;
+                   width: 10%;
+               }
+               td:nth-child(2){
+                font-size: 13px;
+                font-family: $font-bold;
+font-weight: $bold;
+               }
+               td:nth-child(3){
+                font-size: 14px;
+               }
+               td:nth-child(4){
+                font-size: 13px;
+                color:#2D639D;
+               }
+               
+           }
+           tr:first-child{
+               background-color: #FDF1F0;
+                td:first-child{
+                    color: #E53935;
+                }
+           }
+       }
+       
+      }
+}

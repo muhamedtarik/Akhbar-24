@@ -1,0 +1,308 @@
+.mobile-menu{
+  // padding-top: 20px;
+  // box-shadow: inset 16px 0px 30px -10px #545b62;
+  
+  &::before{
+    content: '';
+    display: block;
+    position: sticky;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 1;
+    height: 100%;
+    -webkit-overflow-scrolling: touch;
+    pointer-events: none;
+    -moz-box-shadow: inset 16px 0px 30px -10px rgba(75, 83, 90, 0.8901960784313725);
+    -webkit-box-shadow: inset 16px 0px 30px -10px rgba(75, 83, 90, 0.8901960784313725);
+    box-shadow: inset 16px 0px 30px -10px rgba(75, 83, 90, 0.8901960784313725);
+    overflow-y: auto;
+  overflow-x: hidden;
+  }
+  .a24menu-content{
+    position: absolute;
+    top: 0;
+    width: 100%;
+  }
+  &__user-area{
+    padding-right: 16px;
+    padding-top: 20px;
+    &--img{
+      img{
+
+        width: 75px;
+        border-radius: 50%;
+        border: 4px solid #d7e2ec;
+        padding: 3px;
+      }
+    }
+    &--logout{
+      a{
+        color: #CC173E;
+        padding: 0;
+        margin-right: 10px;
+        position: relative;
+        z-index: 1;
+        img{
+          width: 10px;
+        }
+      }
+    }
+  }
+  &__username{
+    padding-right: 16px;
+    &--name{
+      h2{
+        color: #000;
+        font-size: 16px;
+        font-family: $font-bold;
+font-weight: $bold;
+      }
+    }
+    &--edit{
+      a{
+        color: #146FBF;
+        position: relative;
+        z-index: 1;
+        font-family: $font-bold;
+font-weight: $bold;
+      }
+    }
+  }
+  &__list{
+    padding: 0;
+    &__list-item{
+      list-style: none;
+      margin: 20px 0;
+      ul{
+        padding: 0;
+        background-color: rgba(68, 108, 139, 5%)
+      }
+          &--submenu{
+            
+            list-style: none;
+            padding: 15px 0;
+            a{
+              position: relative;
+              z-index: 1;
+              padding-right: 16px;
+              color: #111;
+              text-decoration: none;
+            }
+          }
+      &--link{
+        color: #111;
+        font-size: 14px;
+        position: relative;
+        z-index: 1;
+        padding-right: 16px;
+        font-family: $font-bold;
+font-weight: $bold;
+        &:hover{
+          color: #111;
+          text-decoration: none;
+        }
+        img{
+          width: 25px;
+          margin-left: 10px;
+        }
+      }
+    }
+  }
+}
+
+
+
+
+// ! Danger Zone (Don't Touch)
+// ? Pushing menu area 
+
+
+.a24menu {
+  position: fixed;
+  width: 250px;
+  height: 100vh;
+  top: 0;
+  z-index: 9999;
+  background: #E9EFF5;
+  overflow-y: auto;
+  overflow-x: hidden;
+  -webkit-overflow-scrolling: touch;
+  background-image: url(/img/mobile/menu-background.png);
+  background-repeat: no-repeat;
+    background-size: contain;
+    &::-webkit-scrollbar {
+      -webkit-appearance: none;
+      width: 0;
+      height: 0;
+  }
+  /* enables momentum scrolling in iOS overflow elements */
+}
+
+.a24menu-content {
+  visibility: hidden;
+}
+
+/* Menu Movement */
+.a24menu-left {
+  -webkit-transform: translate3d(-250px, 0, 0);
+  -ms-transform: translate3d(-250px, 0, 0);
+  transform: translate3d(-250px, 0, 0);
+}
+
+.a24menu-open-left #container,
+.a24menu-open-left .push {
+  -webkit-transform: translate3d(250px, 0, 0);
+  -ms-transform: translate3d(250px, 0, 0);
+  transform: translate3d(250px, 0, 0);
+}
+
+.a24menu-right {
+  -webkit-transform: translate3d(250px, 0, 0);
+  -ms-transform: translate3d(250px, 0, 0);
+  transform: translate3d(250px, 0, 0);
+}
+
+.a24menu-open-right #container,
+.a24menu-open-right .push {
+  -webkit-transform: translate3d(-250px, 0, 0);
+  -ms-transform: translate3d(-250px, 0, 0);
+  transform: translate3d(-250px, 0, 0);
+}
+
+.a24menu-open-left .a24menu,
+.a24menu-open-right .a24menu {
+  -webkit-transform: translate3d(0, 0, 0);
+  -ms-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+}
+.a24menu-open-left .a24menu-content,
+.a24menu-open-right .a24menu-content {
+  visibility: visible;
+}
+
+/* Menu Transitions */
+// #container{
+//   padding-top: 57px;
+// }
+#container,
+.a24menu,
+.push {
+  transition: transform 0.2s cubic-bezier(0.16, 0.68, 0.43, 0.99);
+}
+
+.a24menu-content {
+  transition: visibility 0.2s cubic-bezier(0.16, 0.68, 0.43, 0.99);
+}
+
+/* Site Overlay */
+.site-overlay {
+  display: none;
+}
+
+.a24menu-open-left .site-overlay,
+.a24menu-open-right .site-overlay {
+  display: block;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 9998;
+  // background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(0, 0, 0, 0);
+  -webkit-animation: fade 500ms;
+  animation: fade 500ms;
+}
+
+@keyframes fade {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@-webkit-keyframes fade {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+/* Submenu Appearance */
+.a24menu-submenu {
+
+}
+.a24menu-submenu > ul {
+  padding-left:0px;
+  padding-right: 0;
+  transition: max-height 0.2s ease-in-out, visibility 0.2s ease-in-out;
+}
+.a24menu-submenu > ul .a24menu-link {
+  transition: opacity 0.2s ease-in-out;
+}
+.a24menu-submenu button {
+  width: 100%;
+  color: #b3b3b1;
+  padding: 15px 30px;
+  text-align: left;
+  background: transparent;
+  border: 0;
+}
+.a24menu-submenu button:hover {
+  color: #FFF;
+}
+.a24menu-submenu > a,
+.a24menu-submenu > button {
+  position: relative;
+}
+.a24menu-submenu > a::after,
+.a24menu-submenu > button::after {
+  content: "\f107";
+  font-family: 'FontAwesome';
+  display: block;
+  // height: 11px;
+  // width: 8px;
+  position: absolute;
+  top: 50%;
+  left: -125px;
+  // background: url(/img/mobile/arrow-down.png) no-repeat;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+  transition: transform 0.2s;
+  
+
+}
+
+/* Submenu Movement */
+.a24menu-submenu-closed > ul {
+  max-height: 0;
+  overflow: hidden;
+  visibility: hidden;
+}
+.a24menu-submenu-closed .a24menu-link {
+  opacity: 0;
+}
+
+.a24menu-submenu-open {
+  /* Submenu Icon */
+}
+.a24menu-submenu-open > ul {
+  max-height: 1000px;
+  visibility: visible;
+}
+.a24menu-submenu-open .a24menu-link {
+  opacity: 1;
+}
+.a24menu-submenu-open > a::after,
+.a24menu-submenu-open > button::after {
+  -webkit-transform: translateY(-50%) rotate(-90deg);
+  -ms-transform: translateY(-50%) rotate(-90deg);
+  transform: translateY(-50%) rotate(-90deg);
+}
+
+// ! End Danger Zone (Don't Touch)

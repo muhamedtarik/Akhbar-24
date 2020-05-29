@@ -1,0 +1,94 @@
+# This is a sample build configuration for PHP.
+# Check our guides at https://confluence.atlassian.com/x/e8YWN for more examples.
+# Only use spaces to indent your .yml configuration.
+# -----
+# You can specify a custom docker image from Docker Hub as your build environment.
+image: php:7.2-fpm
+
+pipelines:
+  custom:
+    Deploy:
+      - step:
+          name: Deploy to production
+          deployment: production
+          script:
+            #Install ssh
+            - apt-get update -y
+            - apt-get install -y ssh
+            - cat ./deploy.sh | ssh user@host
+            - echo "Deploy step finished"
+  branches:
+    "dev":
+      - step:
+          name: Test
+          artifacts:
+            - storage/**
+            - vendor/**
+            - public/**
+            - .env
+          script:
+            #Update Image
+            - apt-get update
+
+            #Install Zip
+            - apt-get install -qy zlib1g-dev zip unzip
+            - docker-php-ext-install zip
+
+            #Install Git, Curl and ssh
+            - apt-get install -qy git
+            - apt-get install -qy curl
+            - apt-get install -qy ssh
+
+            #Install MySql
+            - apt-get install -qy default-mysql-client
+            - docker-php-ext-install pdo_mysql
+
+            #Install Crypt
+            - apt-get install -qy libmcrypt-dev
+            - yes | pecl install mcrypt-1.0.1
+
+            #Install Composer Platform Reqs (libjpeg, libpng, bcmath, gd and pcntl)
+            - apt-get install -qy libjpeg-dev libpng-dev libfreetype6-dev
+            - docker-php-ext-install bcmath
+            - docker-php-ext-configure gd --with-freetype-dir=/usr/include/ --with-jpeg-dir=/usr/include/
+            - docker-php-ext-install -j$(nproc) gd
+            - docker-php-ext-install pcntl
+
+            #Copy Environment File
+            - ln -f -s .env.pipelines .env
+
+            #Install Composer
+            - curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer
+            - composer install
+
+            #Generate key & Migrate Database
+            #- php artisan key:generate
+            #- php artisan migrate
+
+            #Run Test Suite
+            - php artisan test --verbose
+          services:
+            - docker
+            - mysql
+          caches:
+            - docker
+            - composer
+      - step:
+          name: Deploy to stagging
+          deployment: staging
+          script:
+            #Install ssh
+            - apt-get update -y
+            - apt-get install -y ssh
+            - cat ./deploy.sh | ssh akhbaar24ppdev@209.59.176.51
+            - echo "Deploy step finished"
+
+definitions:
+  services:
+    mysql:
+      image: mysql:5.7
+      environment:
+        MYSQL_DATABASE: "homestead"
+        MYSQL_RANDOM_ROOT_PASSWORD: "yes"
+        MYSQL_USER: "homestead"
+        MYSQL_PASSWORD: "secret"

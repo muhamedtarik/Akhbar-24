@@ -1,0 +1,121 @@
+body{
+    background-color: white;
+}
+.mix-link{
+    text-decoration: none;
+    &:hover{
+        text-decoration: none;
+    }
+}
+.mix{
+  border-bottom: 1px solid #dee2e6;
+  padding-bottom: 10px;
+  margin-top: 10px;
+  display: block;
+    &__img{
+        position: relative;
+        img{
+                   
+          @media (max-width: 769px) {
+            width: 100%;
+            height: 138px;
+          }
+          @media (max-width: 667px) {
+            width: 100%;
+            height: 120px;
+          }
+          @media (max-width: 415px) {
+            width: 105px;
+            height: 105px;
+          }
+          @media (max-width: 376px) {
+            width: 95px;
+            height: 95px;
+          }
+          @media (max-width: 321px){
+            width: 80px;
+            height: 80px;
+          }
+        }
+        &__icon{
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            background-color: rgba($color: #000000, $alpha: 0.1);
+            color: white;
+            padding: 0.3rem 0.7rem;
+        }
+    }
+    .news-content{
+      height: 81px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      @media (max-width: 768px) {
+        height: 138px;
+      }
+      @media (max-width: 668px) {
+        height: 120px;
+      }
+      @media (max-width: 415px) {
+        height: 105px;
+      }
+      @media (max-width: 376px) {
+        height: 95px;
+      }
+      @media (max-width: 321px){
+        height: 80px;
+      }
+    }
+    &__text{
+        color: #0F3054;
+        font-size: 12px;
+        font-family: $font-bold;
+font-weight: $bold;
+
+    }
+
+    &__icons{
+       padding-top: 0.5rem;
+        &__date{
+
+            font-size: 11px;
+
+        }
+        &__icon{
+
+            &__likes{
+                font-size: 12px;
+                color: #E53935;
+            }
+            &__commenting{
+
+                font-size: 12px;
+            }
+
+            &__bookmark{
+                
+              
+            }
+            
+        }
+    }
+}
+.mix-heading{
+    color: #2D639D;
+    font-size: 14px;
+    padding: 0.8rem 0;
+    font-family: $font-bold;
+font-weight: $bold;
+    border-bottom:1px solid lightgray;
+    position: relative;
+    &:before{
+      content: "";
+      border-bottom: 2px solid #2D639D;
+      width: 30px;
+      height: 2px;
+      position: absolute;
+      bottom: -1px;
+      right: 0;
+    }
+}

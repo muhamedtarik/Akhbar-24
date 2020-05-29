@@ -1,0 +1,234 @@
+.mobile-signup {
+    background-image: url(/img/mobile/signup-bg.png);
+    background-repeat: no-repeat;
+    background-size: 100%;
+
+    &__header {
+        padding-top: 20px;
+        position: relative;
+
+        &--logo {
+            width: 150px;
+        }
+
+        &--back {
+            i {
+                color: #146FBF;
+                font-size: 28px;
+                position: absolute;
+                right: 0;
+                top: 45%;
+
+            }
+        }
+    }
+
+    &__body {
+        &__social {
+            margin-top: 20px;
+
+            &--title {
+                text-align: center;
+                margin-top: 15px;
+
+                h5 {
+                    font-size: 16px;
+                    color: #777;
+
+                    span {
+                        display: inline-block;
+                        position: relative;
+
+                        &:before,
+                        &:after {
+                            content: "";
+                            position: absolute;
+                            height: 5px;
+                            border-bottom: 1px solid #777;
+                            top: 9px;
+                            width: 30%;
+                        }
+
+                        &:before {
+                            right: 100%;
+                            margin-right: 15px;
+                        }
+
+                        &:after {
+                            left: 100%;
+                            margin-left: 15px;
+                        }
+                    }
+                }
+            }
+
+            &__list {
+                padding: 0;
+                display: flex;
+                text-align: center;
+                justify-content: center;
+                margin-top: 20px;
+
+                &--item {
+                    list-style: none;
+
+                    a {
+                        display: block;
+                        text-decoration: none;
+                    }
+
+                    &--icon {
+                        width: 50px;
+                        height: 50px;
+                        justify-content: center;
+                        align-items: center;
+                        border-radius: 4px;
+                        display: flex;
+
+                        i {
+                            font-size: 30px;
+                            color: #fff;
+                        }
+
+                        &.google {
+                            background-color: white;
+                            border: 0.5px solid lightgray;
+                        }
+
+                        &.apple {
+                            background-color: #36474f;
+                        }
+
+                        &.snapchat {
+                            background-color: #fbda4c;
+                        }
+
+                        &.twitter {
+                            background-color: #0faaf4;
+                        }
+
+                        &.facebook {
+                            background-color: #1d77d3;
+                        }
+                    }
+
+                }
+            }
+
+            &--or {
+                text-align: center;
+                margin-top: 15px;
+
+                h5 {
+                    font-size: 16px;
+                    color: #777;
+
+                    span {
+                        display: inline-block;
+                        position: relative;
+
+                        &:before,
+                        &:after {
+                            content: "";
+                            position: absolute;
+                            height: 5px;
+                            border-bottom: 1px solid #777;
+                            top: 9px;
+                            width: 150px;
+                        }
+
+                        &:before {
+                            right: 100%;
+                            margin-right: 15px;
+                        }
+
+                        &:after {
+                            left: 100%;
+                            margin-left: 15px;
+                        }
+                    }
+                }
+            }
+
+            &__form {
+                &__inputs {
+                    margin-top: 20px;
+
+                    input {
+                        background-color: transparent;
+                        height: 50px;
+                        font-size: 16px;
+
+                        &:focus {
+                            color: #111;
+                            background-color: transparent;
+                            border-color: #146FBF;
+                            outline: 0;
+                            box-shadow: none;
+                            font-size: 16px;
+                        }
+                    }
+
+                    &--form-check {
+                        margin-top: 20px;
+
+                        label {
+                            position: relative;
+                            cursor: pointer;
+                            color: #111;
+                            font-size: 14px;
+                        }
+
+                        input[type="checkbox"],
+                        input[type="radio"] {
+                            position: absolute;
+                            left: 9000px;
+                            font-size: 16px;
+                        }
+
+                        input[type="checkbox"]+.label-text:before {
+                            content: "\f096";
+                            font-family: "FontAwesome";
+                            speak: none;
+                            font-style: normal;
+                            font-weight: normal;
+                            font-variant: normal;
+                            text-transform: none;
+                            line-height: 1;
+                            -webkit-font-smoothing: antialiased;
+                            width: 1em;
+                            display: inline-block;
+                            margin-left: 5px;
+                        }
+
+                        input[type="checkbox"]:checked+.label-text:before {
+                            content: "\f14a";
+                            color: #2980b9;
+                            animation: effect 250ms ease-in;
+                            font-size: 16px;
+                        }
+
+                        input[type="checkbox"]:disabled+.label-text {
+                            color: #aaa;
+                            font-size: 16px;
+                        }
+
+                        input[type="checkbox"]:disabled+.label-text:before {
+                            content: "\f0c8";
+                            color: #ccc;
+                            font-size: 16px;
+                        }
+                    }
+
+                    &--submit-btn {
+                        background-color: #146FBF;
+                        width: 100%;
+                        height: 50px;
+                        color: #fff;
+                    }
+                }
+            }
+
+        }
+    }
+}

@@ -1,0 +1,74 @@
+body{
+    background-color: white;
+}
+.clubs-news-link{
+    text-decoration: none;
+    &:hover{
+        text-decoration: none;
+    }
+}
+.clubs-news{
+    padding-right:0.6rem ;
+    padding-left:0.6rem ;
+    margin-top: 0.5rem;
+    margin-bottom: 0.7rem;
+    border-bottom: 0.4px solid lightgray;
+    &__img{
+        position: relative;
+        img{
+            object-fit: cover;
+        }
+        &__icon{
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            background-color: rgba($color: #000000, $alpha: 0.1);
+            color: white;
+            padding: 0.3rem 0.7rem;
+        }
+    }
+
+    &__text{
+        color: #0F3054;
+        font-size: 12px;
+        margin-top: 1rem;
+
+    }
+
+    &__icons{
+       padding-top: 0.5rem;
+        &__date{
+
+            font-size: 11px;
+
+        }
+        &__icon{
+
+            &__likes{
+                font-size: 12px;
+                color: #E53935;
+            }
+            &__commenting{
+
+                font-size: 12px;
+            }
+            
+        }
+    }
+}
+.clubs-news__heading{
+    color: #2D639D;
+    font-size: 14px;
+    padding: 0.8rem 0;
+    border-bottom:1px solid lightgray;
+    position: relative;
+    &:before{
+      content: "";
+      border-bottom: 2px solid #2D639D;
+      width: 30px;
+      height: 2px;
+      position: absolute;
+      bottom: -1px;
+      right: 0;
+    }
+}

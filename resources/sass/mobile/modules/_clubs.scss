@@ -1,0 +1,27 @@
+body{
+    background-color: #F5F5F5;
+}
+.clubs{
+    background-color: white;
+    margin-top: 1rem;
+    ul{
+        padding-right: 0;
+        list-style-type: none;
+        li{
+            border-bottom: 1px solid lightgray;
+            padding: 0.5rem;
+            cursor: pointer;
+            img{
+                width: 44px;
+                height: 44px;
+                margin-left: 0.6rem;
+            }
+            a{
+                text-decoration: none;
+                color: black;
+                font-size: 16px;
+                display: block;
+            }
+        }
+    }
+}

@@ -1,0 +1,147 @@
+$font-bold: "HelveticaNeueLTBold";
+$font-regular: "HelveticaNeueLTRegular";
+
+// $font-bold: "Arial,Helvetica,sans-serif";
+// $font-regular: "TahomaRegular";
+$bold: normal;
+// @font-face {
+//     font-family: "TahomaBold";
+//     font-style: normal;
+//     font-weight: normal;
+//     src: url("/fonts/tahomabd.ttf") format("truetype");
+// }
+
+// @font-face {
+//     font-family: "TahomaRegular";
+//     font-style: normal;
+//     font-weight: normal;
+//     src: url("/fonts/tahoma.otf") format("truetype");
+// }
+@font-face {
+    font-family: "HelveticaNeueLTRegular";
+    font-style: normal;
+    font-weight: normal;
+    src: url("/fonts/HelveticaNeueLTRegular.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: "HelveticaNeueLTBold";
+    font-style: normal;
+    font-weight: normal;
+    src: url("/fonts/HelveticaNeueLTBold.otf") format("truetype");
+}
+
+body {
+    font-family: $font-regular;
+
+    .container {
+        box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15) !important
+    }
+}
+
+.layout {
+    &__body {
+        width: 72.6%;
+        padding-right: 15px;
+    }
+
+    &__sidebar {
+        width: 26.4%;
+    }
+}
+
+.views-cases {
+  &.featured , &.homelisted{
+    img{
+      width: 12px !important;
+      height: 16px !important;
+
+    }
+  }
+  &.homelisted{
+    img{
+
+      position: relative;
+      top: -2px;
+    }
+  }
+    &.gallerylist {
+      font-size: 13px !important;
+        img {
+            width: 11px;
+            position: relative;
+            top: -2px;
+        }
+    } 
+    &.videoList {
+      font-size: 10px !important;
+        img {
+            width: 10px;
+            position: relative;
+            top: -2px;
+        }
+    }  
+    &.videoItem {
+      font-size: 12px !important;
+        img {
+         
+            width: 12px;
+            position: relative;
+            top: -3px;
+        }
+    }  
+    &.galleryItem {
+        img {
+            width: 12px;
+        }
+    }
+    &.itemDetails{
+      font-size: 14px !important;
+      img {
+       
+          width: 13px;
+        
+      }
+    }
+    font-size: 14px;
+    img {
+        width: 15px;
+    }
+
+    &--grey {
+        color: #6c757d;
+    }
+
+    &--yellow {
+        color: #FFA000;
+    }
+
+    &--red {
+        color: #E53935;
+    }
+}
+@import "modules/weather";
+@import "modules/header";
+@import "modules/pagination";
+@import "modules/footer";
+@import "modules/item";
+@import "modules/comments";
+@import "modules/policy";
+@import "modules/contactUs";
+@import "modules/video";
+@import "modules/changePassword";
+@import "shared/resets";
+@import "modules/error&fix";
+@import "modules/editProfile";
+@import "modules/search";
+@import "modules/author";
+@import "modules/tags";
+@import "modules/galleryDetails";
+@import "modules/gallery";
+@import "modules/sso";
+@import "modules/s24header";
+@import "modules/s24footer";
+@import "modules/a24";
+@import "modules/s24";
+@import "modules/video-details";
+@import "modules/related-news";

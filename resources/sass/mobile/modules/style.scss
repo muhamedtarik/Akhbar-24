@@ -1,0 +1,153 @@
+
+
+$font-bold: "HelveticaNeueLTBold";
+$font-regular: "HelveticaNeueLTRegular";
+// $font-bold: "Arial,Helvetica,sans-serif";
+// $font-regular: "TahomaRegular";
+$bold: normal;
+// @font-face {
+//     font-family: "TahomaBold";
+//     font-style: normal;
+//     font-weight: normal;
+//     src: url("/fonts/tahomabd.ttf") format("truetype");
+// }
+
+// @font-face {
+//     font-family: "TahomaRegular";
+//     font-style: normal;
+//     font-weight: normal;
+//     src: url("/fonts/tahoma.otf") format("truetype");
+// }
+
+html {
+    @media(max-width: 767px) {
+        overflow-x: hidden;
+    }
+}
+
+html, body{
+  font-family: $font-regular;
+  transition: all 400ms ease;
+  overflow-x: hidden;
+  height: 100%;
+  direction: rtl;
+  text-align:right;
+  -webkit-overflow-scrolling: touch;
+}
+@font-face {
+    font-family: "HelveticaNeueLTRegular";
+    font-style: normal;
+    font-weight: normal;
+    src: url("/fonts/HelveticaNeueLTRegular.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: "HelveticaNeueLTBold";
+    font-style: normal;
+    font-weight: normal;
+    src: url("/fonts/HelveticaNeueLTBold.otf") format("truetype");
+}
+.cookiealert {
+  position: fixed;
+  bottom: -1px;
+  left: 0;
+  width: 100%;
+  margin: 0 !important;
+  z-index: 1040;
+  opacity: 0;
+  border-radius: 0;
+  transform: translateY(100%);
+  transition: all 500ms ease-out;
+  color: #fff;
+    background: rgba(0, 0, 0, 0.7);
+    box-shadow: 0px 0px 10px -5px;
+  padding: 15px 0;
+}
+
+.cookiealert.show {
+  opacity: 1;
+  transform: translateY(0%);
+  transition-delay: 1500ms;
+}
+
+.cookiealert a:hover {
+  text-decoration: none
+}
+
+.cookiealert p {
+  margin-bottom: 0;
+  font-size: 14px;
+
+}
+
+.cookiealert a {
+  color: #00BAFF;
+  font-size: 14px;
+  border-bottom: 1px solid;
+}
+
+.cookiealert .acceptcookies {
+  background: transparent;
+  border-color: #fff;
+  font-size: 15px;
+  margin-top: 17px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  border-width: 2px;
+  padding: 5px 30px;
+  width: 98%;
+}
+.fancybox-container, .fancybox-active{
+  direction: rtl !important;
+  overflow-y: auto !important;
+  height: 100% !important;
+  transform: unset !important;
+
+}
+.slider-news.slick-slide {
+  width: 200px;
+}
+
+
+.views-cases {
+  font-size: 14px;
+  img {
+      width: 15px;
+  }
+
+  &--grey {
+      color: #6c757d;
+  }
+
+  &--yellow {
+      color: #FFA000;
+  }
+
+  &--red {
+      color: #E53935;
+  }
+}
+@import "nav";
+@import "menu";
+@import "home";
+@import "auther";
+@import "gallery";
+@import "item";
+@import "s24latestvideos";
+@import "gdetails";
+@import "search";
+@import "mix";
+@import "placeholders";
+@import "login";
+@import "signup";
+@import "forget-password";
+@import "edit-profile";
+@import "teams";
+@import "clubs";
+@import "clubs-news";
+@import "s24home";
+@import "matches_table";
+@import "video24";
+@import "video-details";
+@import "pagination";
+
